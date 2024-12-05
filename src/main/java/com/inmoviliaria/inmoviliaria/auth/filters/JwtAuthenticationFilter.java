@@ -95,7 +95,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         body.put("token", token);
         body.put("message", String.format("Hola %s, has iniciado sesión con éxito", username));
         body.put("username", username);
-        body.put("isAgent", roles);
+        body.put("authorities", roles);
 
         // Escribir la respuesta como JSON
         response.getWriter().write(new ObjectMapper().writeValueAsString(body));
