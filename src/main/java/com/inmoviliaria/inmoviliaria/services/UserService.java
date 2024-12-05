@@ -45,7 +45,7 @@ public class UserService implements IUserService{
 
 
         List<Role> roles=new ArrayList<Role>();
-        roles=getRoles("CLIENTE");
+        roles=getRoles("ROLE_CLIENTE");
         user.setRoles(roles);
 
         return DtoMapperUser.builder().setUser(usuariosRepository.save(user)).build();
@@ -60,7 +60,7 @@ public class UserService implements IUserService{
 
 
         List<Role> roles=new ArrayList<Role>();
-        roles=getRoles("ADMINISTRADOR");
+        roles=getRoles("ROLE_ADMINISTRADOR");
         user.setRoles(roles);
 
         return DtoMapperUser.builder().setUser(usuariosRepository.save(user)).build();
@@ -75,7 +75,7 @@ public class UserService implements IUserService{
 
 
         List<Role> roles=new ArrayList<Role>();
-        roles=getRoles("AGENTE");
+        roles=getRoles("ROLE_AGENTE");
         user.setRoles(roles);
 
         return DtoMapperUser.builder().setUser(usuariosRepository.save(user)).build();
