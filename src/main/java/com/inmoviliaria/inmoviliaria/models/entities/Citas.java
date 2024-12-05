@@ -34,15 +34,15 @@ public class Citas {
     private Usuarios cliente;
 
 
-    @Column(name = "fechaAsig")
-    private Date fechaAsig;
+    @Column(name = "fecha_asig")
+    private LocalDate fecha_asig;
 
     @ManyToOne
     @JoinColumn(name = "agente") 
     private Usuarios agente;
 
-    @Column(name = "fechaFin")
-    private Date fechaFin;
+    @Column(name = "fecha_fin")
+    private LocalDate fecha_fin;
 
     @Column(name = "estado")
     private Boolean estado;
@@ -90,13 +90,7 @@ public class Citas {
         this.cliente = cliente;
     }
 
-    public Date getFechaAsig() {
-        return fechaAsig;
-    }
-
-    public void setFechaAsig(Date fechaAsig) {
-        this.fechaAsig = fechaAsig;
-    }
+    
 
     public Usuarios getAgente() {
         return agente;
@@ -106,12 +100,22 @@ public class Citas {
         this.agente = agente;
     }
 
-    public Date getFechaFin() {
-        return fechaFin;
+   
+
+    public LocalDate getFecha_asig() {
+        return fecha_asig;
     }
 
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
+    public void setFecha_asig(LocalDate fecha_asig) {
+        this.fecha_asig = fecha_asig;
+    }
+
+    public LocalDate getFecha_fin() {
+        return fecha_fin;
+    }
+
+    public void setFecha_fin(LocalDate fecha_fin) {
+        this.fecha_fin = fecha_fin;
     }
 
     public Boolean getEstado() {
